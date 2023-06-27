@@ -21,11 +21,19 @@ function grabFAV(){
     var mysize = document.getElementById("size").value;
     var duckapi = "https://icons.duckduckgo.com/ip3/";
 
+    var h1 = "https://";
+    var h2 = "http://";
+    myUrl = myUrl.replace(h1,"");
+    myUrl = myUrl.replace(h2,"");
     if(mysize=="default"){
-        var h1 = "https://";
-        var h2 = "http://";
-        myUrl = myUrl.replace(h1,"");
-        myUrl = myUrl.replace(h2,"");
         myImg.src = duckapi+myUrl+".ico";
+    }else if(mysize==16){
+        myImg.src = googapi+myUrl+"&sz="+16;
+    }else if(mysize==32){
+        myImg.src = googapi+myUrl+"&sz="+32;
+    }else if(mysize==64){
+        myImg.src = googapi+myUrl+"&sz="+64;
+    }else if(mysize==128){
+        myImg.src = googapi+myUrl+"&sz="+128;
     }
 }
