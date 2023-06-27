@@ -20,6 +20,7 @@ function grabFAV(){
     var myImg = document.getElementById("favimg");
     var mysize = document.getElementById("size").value;
     var duckapi = "https://icons.duckduckgo.com/ip3/";
+    var googapi = "https://s2.googleusercontent.com/s2/favicons?domain=";
 
     var h1 = "https://";
     var h2 = "http://";
